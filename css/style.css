@@ -627,15 +627,10 @@ margin-bottom: 16px;
 }
 
 <!-- MOBAIL MENU-->
-/* .test {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vw;
-  background-color: green;
-  z-index: 9998;
-} */
+
+.mobile-menu-container {
+  position: relative;
+  }
 .mobile-menu-window {
   position: fixed;
   top: 0;
@@ -644,16 +639,15 @@ margin-bottom: 16px;
   height: 100vw;
   background-color: #ffffff;
   z-index: 999;
-  /* opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) ; */
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu-container {
-position: relative;
+.mobile-menu-window.is-open {
+  transform: translateX(0);
 }
 
-.mobile-menu-link {
+
+.mobile-window-menu-link {
   font-size: 36px;
   color: #2E2F42;
   font-weight: 700;
@@ -661,13 +655,13 @@ position: relative;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu-link:hover,
-      .mobile-menu-link:focus {
+.mobile-window-menu-link:hover,
+      .mobile-window-menu-link:focus {
         color: #404bbf;
       }
      
       
-.mobile-menu-list {
+.mobile-window-menu-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -958,7 +952,11 @@ column-gap: 24px;
     
       padding-left: 38px;
   }
+  .mobile-menu-window {
+    display: none;
+  }
 }
+
   @media screen and (min-resolution: 192dpi) and (min-width: 768px),
   screen and (min-resolution: 2dppx) and (min-width: 768px),
   screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
@@ -966,6 +964,7 @@ column-gap: 24px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70),
     rgba(46, 47, 66, 0.70)), url('../images/tablet-bg@2x.jpg');
   }
+
 }
 
   /* ====== Desktop ====== */
