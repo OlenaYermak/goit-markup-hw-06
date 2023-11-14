@@ -215,9 +215,13 @@
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     max-width: 264px;
-    margin-left: auto;
-    margin-right: auto;
+    
     margin-bottom: 72px;
+
+}
+.team-list {
+  display: flex;
+  flex-direction: column;
 }
 .team-list-item:last-child {
 margin-bottom: 0;
@@ -239,6 +243,7 @@ margin-bottom: 0;
   display: flex;
   justify-content: center;
   gap: 24px;
+
   
 }
 .social-team-list-link:hover,
@@ -416,7 +421,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vw;
+  height: 100%;
   background-color: rgba(46, 47, 66, 0.40);
   z-index: 999;
   opacity: 0;
@@ -596,6 +601,7 @@ margin-bottom: 16px;
 .contact-form-own-checkbox {
   background-color: #404BBF;
    fill: #F4F4FD;
+
   border: none;
 }
 
@@ -636,7 +642,7 @@ margin-bottom: 16px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vw;
+  height: 100%;
   background-color: #ffffff;
   z-index: 999;
   transform: translateX(100%);
@@ -738,8 +744,9 @@ margin-bottom: 48px;
   }
   .social-mobile-menu-list {
     display: flex;
-    gap: 40px;
+    
     padding-bottom: 40px;
+    justify-content: space-between;
   }
   
 
@@ -786,7 +793,7 @@ margin-bottom: 48px;
         padding: 16px 0;
         display: flex;
         flex-direction: column;
-  justify-content: space-between;
+  gap: 12px;
       }
       .contact-list-item:last-child {
         margin-right: 0;
@@ -889,14 +896,14 @@ margin-bottom: 48px;
   }
   .team-list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 64px;
+    justify-content: center;
     
   }
-  .team-list:last-child {
-    margin-right: 0;
-  }
+  
   /* ======TABLET PORTFOLIO====== */
   .portfolio-list-item {
     width: calc((100% - 24px) / 2);
